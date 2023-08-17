@@ -1,0 +1,48 @@
+.nav-box {
+  background-color: white;
+  margin-bottom: 70px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+.li-navbar {
+  color: black;
+  font-size: 14px;
+}
+
+.sign-up-box {
+  width: 90px;
+  height: 35px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: white;
+  background-color: #ff9c00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 100;
+}
+
+.sign-up-box:hover {
+  background-color: white;
+  color: #ff9c00;
+  border: 1px solid #ff9c00;
+}
+
+.sign-in-box {
+  width: 90px;
+  height: 35px;
+  border-radius: 20px;
+  border: 1px solid #ff9c00;
+  background-color: white;
+  font-size: 14px;
+  color: #ff9c00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 100;
+}
+
+.sign-in-box:hover {
+  background-color: #ff9c00;
+  color: white;
+}
