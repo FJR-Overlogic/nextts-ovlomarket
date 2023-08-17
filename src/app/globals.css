@@ -1,9 +1,8 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~bootstrap/dist/css/bootstrap.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 * {
   font-family: "Inter", sans-serif;
-  letter-spacing: 1px;
 }
 
 /* :root {
