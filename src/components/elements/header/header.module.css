@@ -5,29 +5,40 @@
   align-items: center;
 }
 
+.header-container {
+  height: 500px;
+  border-radius: 10px;
+  width: 1200px;
+  background: linear-gradient(to bottom, #ffbe54b2, rgba(237, 237, 237, 0.826));
+  display: flex;
+}
+
+.lottie-header {
+  height: 460px;
+}
+
+.title-input-box {
+  flex-direction: column;
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .title-header {
-  position: absolute;
-  top: 40%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  font-size: 35px;
+  font-size: 50px;
   font-weight: 500;
-  color: black;
+  color: white;
   text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
   text-align: center;
+  margin-bottom: 40px;
 }
 
 .search-box {
-  position: absolute;
-  top: 50%;
-  left: 28.5%;
   width: 320px;
-  background-color: rgba(128, 128, 128, 0.283);
   height: 40px;
-  transform: translate(-50%, -50%);
+  background-color: rgba(128, 128, 128, 0.283);
   border-radius: 20px;
-  margin-top: 20px;
-  padding: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,21 +86,27 @@
   .header {
     margin-top: 65px;
   }
-  .header-img {
-    width: 380px;
-    height: 180px;
+
+  .header-container {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0px;
+  }
+
+  .lottie-header {
+    height: 300px;
+  }
+
+  .title-input-box {
+    margin-left: 0px;
   }
 
   .title-header {
-    position: absolute;
-    top: 150px;
-    left: 32%;
-    font-size: 20px;
+    font-size: 35px;
+    margin-bottom: 30px;
   }
 
   .search-box {
-    top: 220px;
-    left: 50%;
     background-color: rgba(128, 128, 128, 0.66);
   }
 }
