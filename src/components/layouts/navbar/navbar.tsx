@@ -61,12 +61,12 @@ export default function Navbar() {
                 <div className={`${styles["li-navbar"]}`}>About Us</div>
               </Link>
             </li>
-            <div className="d-flex ms-4">
-              <Link className={`nav-link ${styles["sign-up-box"]}`} href="#">
-                Sign Up
-              </Link>
-              <Link className={`nav-link ${styles["sign-in-box"]} ms-2`} href="#">
+            <div className={`d-flex ms-4 ${styles["sign-box"]}`}>
+              <Link className={`nav-link ${styles["sign-in-box"]}`} href="#">
                 Sign In
+              </Link>
+              <Link className={`nav-link ${styles["sign-up-box"]}  ms-2`} href="#">
+                Sign Up
               </Link>
             </div>
           </ul>

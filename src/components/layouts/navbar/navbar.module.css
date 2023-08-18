@@ -9,6 +9,10 @@
   font-size: 14px;
 }
 
+.li-navbar:hover {
+  color: #ff9c00;
+}
+
 .sign-up-box {
   width: 90px;
   height: 35px;
@@ -20,12 +24,6 @@
   justify-content: center;
   align-items: center;
   font-weight: 100;
-}
-
-.sign-up-box:hover {
-  background-color: white;
-  color: #ff9c00;
-  border: 1px solid #ff9c00;
 }
 
 .sign-in-box {
@@ -43,6 +41,16 @@
 }
 
 .sign-in-box:hover {
+  color: white;
   background-color: #ff9c00;
+}
+
+.sign-in-box:hover + .sign-up-box {
+  background-color: white;
+  border: 1px solid #ff9c00;
+  color: #ff9c00;
+}
+
+.sign-up-box:hover {
   color: white;
 }
