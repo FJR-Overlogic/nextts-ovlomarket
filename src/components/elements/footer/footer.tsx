@@ -1,4 +1,4 @@
-import FooterSection from "../footerSection/footer-section";
+import FooterSection from "../footerSection/footerSection";
 import styles from "./footer.module.css";
 
 export default function Footer() {
@@ -10,51 +10,42 @@ export default function Footer() {
           </div>
           <FooterSection
             title={"Contact us"}
-            links={[
-                "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",   
-                "mail@overlogic.com",
-                "+62 123456789"
-            ]}
+            links_a={"Contact us if you need more information about our Company."}
+            links_b={"mail@overlogic.com"}
+            links_c={"+62 123456789"}
           />
         </div>
         <div className={`${styles["footer-section"]}`}>
           <FooterSection
             title={"Pages"}
-            links={[
-                "Home",
-                "Shop Online",
-                "Contact Us",
-                "Whats New",
-                "Most Popular",
-                "Best Selling"
-            ]
-            }
+            links_a={"Home"}
+            links_b={"Shop Online"}
+            links_c={"Contact Us"}
+            links_d={"Whats New"}
+            links_e={"Most Popular"}
+            links_f={"Best Selling"}
           />
         </div>
         <div className={`${styles["footer-section"]}`}>
           <FooterSection
             title={"Categories"}
-            links={[
-              "Category 1",
-              "Category 2",
-              "Category 3",
-              "Category 4",
-              "Category 5",
-            ]}
+            links_a={"Category 1"}
+            links_b={"Category 2"}
+            links_c={"Category 3"}
+            links_d={"Category 4"}
+            links_e={"Category 5"}
           />
         </div>
         <div className={`${styles["footer-section"]}`}>
           <FooterSection
             title={"News Letter Subscription"}
-            links={
-              "Get the Latest Products & Best Deals in Your Inbox as First Person"
-            }
+            links_a={"Get the Latest Products & Best Deals in Your Inbox as First Person"}
           />
-            <form  style={{padding:"4px",paddingLeft:"3330ox", backgroundColor:"rgba(0, 0, 0, 0.2)", width:"100%", display: "flex", flexDirection:"row", alignItems:"center", justifyContent:"center"}} className="rounded-pill" action="newsletter-form">
+            <form  style={{padding:"4px",paddingLeft:"3330ox", backgroundColor:"rgba(0, 0, 0, 0.2)", width:"100%", display: "flex", flexDirection:"row", alignItems:"center", justifyContent:"space-beetween"}} className={`container ${styles["footer-form"]}`} action="newsletter-form">
                 <div  className="form-container">
                     <input style={{textIndent:"20px", background:"none", border:"none", outline:"none", color:"#FFF"}} type="text" placeholder="Your Email Address"/>
                 </div>
-                <button style={{height:"30px", display:"flex", alignItems:"center"}} className="btn btn-warning rounded-pill">Submit</button>
+                <button style={{height:"30px", display:"flex", alignItems:"center", backgroundColor:"#ff9c00", color:"#FFF"}} className={`btn btn-warning rounded-pill ${styles["footer-button"]}`}>Submit</button>
             </form>
         </div>
       </div>
