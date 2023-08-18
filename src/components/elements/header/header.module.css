@@ -72,9 +72,13 @@
   width: 70px;
   cursor: pointer;
   font-size: 12px;
-  margin-right: 2px;
+  margin-right: 5px;
   color: white;
   background-color: #ff9c00;
+}
+
+.search-box button:hover {
+  background-color: #ffa616;
 }
 
 .button:hover {
