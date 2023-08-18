@@ -1,0 +1,13 @@
+.advertisement {
+    width: 81%;
+    background: rgb(9, 127, 199);
+    background: -moz-radial-gradient(circle, rgba(9, 127, 199, 1) 0%, rgba(1, 82, 146, 1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(9, 127, 199, 1) 0%, rgba(1, 82, 146, 1) 100%);
+    background: radial-gradient(circle, rgba(9, 127, 199, 1) 0%, rgba(1, 82, 146, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#097fc7", endColorstr="#015292", GradientType=1);
+}
+
+.advertisement_text {
+    height: 100%;
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5)
+}
