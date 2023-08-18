@@ -4,6 +4,8 @@ import type { Metadata } from "next";
 import Navbar from "@/components/layouts/navbar/navbar";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const metadata: Metadata = {
   title: "OvLoMarket",
@@ -25,6 +27,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const { pathname } = router as CustomRouter;
 
   useEffect(() => {}, [pathname]);
+
+  // inisialisasi aos
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+    });
+  }, []);
 
   return (
     <html lang="en">
