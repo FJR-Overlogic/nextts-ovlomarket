@@ -3,7 +3,7 @@ import styles from "./footer.module.css";
 
 export default function Footer() {
   return (
-    <div className={`${styles["footer"]}`}>
+    <div className={`${styles["footer"]}`} data-aos="fade-up" data-aos-anchor-placement="center-bottom">
       <div className={`container ${styles["footer-container"]}`}>
         <div className={`${styles["footer-section"]}`}>
           <div className="navbar-brand" style={{ fontSize: "25px", color:"#FFFF" }}>Over<span style={{ color: "#ff9c00" }}>Logic</span>
