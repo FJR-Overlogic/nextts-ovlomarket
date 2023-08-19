@@ -1,21 +1,18 @@
 import Link from "next/link";
 import styles from "./navbar.module.css";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isMenuClicked, setIsMenuClicked] = useState(false);
+
+  const updateMenu = () => {
+    setIsMenuClicked(!isMenuClicked);
+  };
+
   return (
-    <nav className={`navbar navbar-expand-lg p-2 fixed-top ${styles["nav-box"]}`}>
-      <div
-        className="container"
-        style={{
-          fontSize: "28px",
-        }}
-      >
-        <div
-          className="navbar-brand"
-          style={{
-            fontSize: "25px",
-          }}
-        >
+    <div>
+      <nav className={`${styles["nav-box"]} fixed-top`}>
+        <div className={`${styles["title-navbar"]} ${isMenuClicked ? styles.visible : styles.hidden}`}>
           Over
           <span
             style={{
@@ -25,53 +22,47 @@ export default function Navbar() {
             Logic
           </span>
         </div>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div
-          className="collapse navbar-collapse"
-          id="navbarNav"
-          style={{
-            marginLeft: "100px",
-          }}
-        >
-          <ul className="navbar-nav gap-5 fw-semibold">
-            <li className="nav-item">
-              <Link className="nav-link" aria-current="page" href="#">
-                <div className={`${styles["li-navbar"]}`}>Home</div>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="#">
-                <div className={`${styles["li-navbar"]}`}>Shop Online</div>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="#">
-                <div className={`${styles["li-navbar"]}`}>What's New</div>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="#">
-                <div className={`${styles["li-navbar"]}`}>Contact</div>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" href="#">
-                <div className={`${styles["li-navbar"]}`}>About Us</div>
-              </Link>
-            </li>
-            <div className={`d-flex ms-4 ${styles["sign-box"]}`}>
-              <Link className={`nav-link ${styles["sign-in-box"]}`} href="#">
-                Sign In
-              </Link>
-              <Link className={`nav-link ${styles["sign-up-box"]}  ms-2`} href="#">
-                Sign Up
-              </Link>
-            </div>
-          </ul>
+        <div className={styles["burger-menu"]} onClick={updateMenu}>
+          <div className={`${styles["burger-bar"]} ${isMenuClicked ? styles.clicked : styles.unclicked}`}></div>
+          <div className={`${styles["burger-bar"]} ${isMenuClicked ? styles.clicked : styles.unclicked}`}></div>
+          <div className={`${styles["burger-bar"]} ${isMenuClicked ? styles.clicked : styles.unclicked}`}></div>
         </div>
-      </div>
-    </nav>
+        <ul className={`fw-semibold text-center gap-5 ${isMenuClicked ? styles.visible : styles.hidden}`}>
+          <li>
+            <Link className="text-decoration-none" href="#">
+              <div className={`${styles["li-navbar-text"]}`}>Home</div>
+            </Link>
+          </li>
+          <li>
+            <Link className="text-decoration-none" href="#">
+              <div className={`${styles["li-navbar-text"]}`}>Shop Online</div>
+            </Link>
+          </li>
+          <li>
+            <Link className="text-decoration-none" href="#">
+              <div className={`${styles["li-navbar-text"]}`}>What's New</div>
+            </Link>
+          </li>
+          <li>
+            <Link className="text-decoration-none" href="#">
+              <div className={`${styles["li-navbar-text"]}`}>Contact</div>
+            </Link>
+          </li>
+          <li>
+            <Link className="text-decoration-none" href="#">
+              <div className={`${styles["li-navbar-text"]}`}>About Us</div>
+            </Link>
+          </li>
+          <div className={`d-flex ${styles["sign-box"]}`}>
+            <Link className={`nav-link ${styles["sign-in-box"]}`} href="#">
+              Sign In
+            </Link>
+            <Link className={`nav-link ${styles["sign-up-box"]}  ms-2`} href="#">
+              Sign Up
+            </Link>
+          </div>
+        </ul>
+      </nav>
+    </div>
   );
 }
