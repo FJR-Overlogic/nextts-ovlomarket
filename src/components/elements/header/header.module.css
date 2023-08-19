@@ -7,9 +7,10 @@
 
 .header-container {
   height: 500px;
-  border-radius: 10px;
+  border-radius: 5px;
   width: 1200px;
-  background: linear-gradient(to bottom, #ffbe54b2, rgba(237, 237, 237, 0.826));
+  background: linear-gradient(to bottom, #ffbe54b2, white);
+  /* background: linear-gradient(to bottom, #ffbe54b2, rgba(237, 237, 237, 0.826)); */
   display: flex;
 }
 
@@ -88,7 +89,7 @@
 
 @media (max-width: 768px) {
   .header {
-    margin-top: 65px;
+    margin-top: 60px;
   }
 
   .header-container {
