@@ -6,7 +6,9 @@ export default function Footer() {
     <div className={`${styles["footer"]}`} data-aos="fade-up" data-aos-anchor-placement="center-bottom">
       <div className={`container ${styles["footer-container"]}`}>
         <div className={`${styles["footer-section"]}`}>
-          <div className="navbar-brand" style={{ fontSize: "25px", color:"#FFFF" }}>Over<span style={{ color: "#ff9c00" }}>Logic</span>
+          <div className={`${styles.footer_brand}`}>
+            Over
+            <span className={`${styles.footer_span}`}>Logic</span>
           </div>
           <FooterSection
             title={"Contact us"}
@@ -41,12 +43,13 @@ export default function Footer() {
             title={"News Letter Subscription"}
             links_a={"Get the Latest Products & Best Deals in Your Inbox as First Person"}
           />
-            <form  style={{padding:"4px",paddingLeft:"3330ox", backgroundColor:"rgba(0, 0, 0, 0.2)", width:"100%", display: "flex", flexDirection:"row", alignItems:"center", justifyContent:"space-beetween"}} className={`container ${styles["footer-form"]}`} action="newsletter-form">
-                <div  className="form-container">
-                    <input style={{textIndent:"20px", background:"none", border:"none", outline:"none", color:"#FFF"}} type="text" placeholder="Your Email Address"/>
-                </div>
-                <button style={{height:"30px", display:"flex", alignItems:"center", backgroundColor:"#ff9c00", color:"#FFF"}} className={`btn btn-warning rounded-pill ${styles["footer-button"]}`}>Submit</button>
-            </form>
+          <form className={`${styles.footer_form}`} action="newsletter-form">
+            <div className="form-container">
+              <input type="email"/>
+              <label htmlFor="email">Your Email Address</label>
+            </div>
+            <button className={`btn ${styles.footer_button}`}>Submit</button>
+          </form>
         </div>
       </div>
     </div>

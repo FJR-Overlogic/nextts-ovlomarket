@@ -6,19 +6,92 @@
     padding-left: 10%;
     padding-right: 10%;
 }
-.footer-form {
+
+.footer_form {
+    margin-top: 20px;
+    padding: 5px;
     border-radius: 20px;
+    padding-left: 1%;
+    background-color: rgb(0, 0, 0, 0.2);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 }
+
+.footer_form label {
+    top: 0;
+    font-size: 14px;
+    position: absolute;
+    transform: translate(0, 12px) scale(1);
+    color: #FFF;
+    padding: 0 12px;
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+.footer_form:focus-within label {
+    transform: translate(0) scale(1);
+    border-radius: 8px;
+    font-size: 8px;
+}
+
 .footer-container {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 200px;
 }
+
+.footer-container input {
+    display: flex;
+    position: relative;
+    width: 100%;
+    text-indent: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-size: smaller;
+}
+
+.footer-container input:focus {
+    outline: #ff9c00;
+}
+
+.footer_brand {
+    font-size: 25px;
+    color: #FFFF;
+}
+
 .footer-section {
     margin: 5px;
     width: 33%;
     height: 90%;
+}
+
+.footer_button {
+    height: 32px;
+    width: 70px;
+    border-radius: 20px;
+    border: #ff9c00;
+    display: flex;
+    align-items: center;
+    background-color: #ff9c00;
+    color: #fff3d8;
+    font-size: smaller;
+    outline: red;
+}
+
+.footer_button:hover {
+    background-color: #ffa616;
+    color: rgb(255, 255, 255);
+}
+
+.footer_span {
+    color: #ff9c00;
 }
 
 @media (max-width: 1015px) {
@@ -26,39 +99,47 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
+
     .footer {
         height: 500px;
     }
+
     .footer-section {
-        width: 90%;
+        width: 100%;
     }
-  }
+}
+
 @media (max-width: 755px) {
     .footer-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
+
     .footer {
         height: 750px;
     }
-    .footer-section {
-        width: 100%;
-    }
-    .footer-form {
-        width: 200px;
-        justify-content: space-between;
-    }
-  }
+}
 
 @media (max-width: 620px) {
     .footer-container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
-  }
 
-@media (max-width: 350px) {
+    .footer {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
+@media (max-width: 360px) {
     .footer-section {
         width: 90%;
     }
+
+    .footer {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
 }
