@@ -95,6 +95,8 @@
 
 /* responsive */
 
+/* Tablet */
+
 @media (max-width: 1090px) {
   .nav-box {
     justify-content: space-between;
@@ -105,11 +107,13 @@
   .title-navbar.visible {
     margin: 0;
     color: rgb(231, 231, 231);
+    transition: 1s;
   }
 
   .title-navbar.hidden {
     margin: 0;
     color: black;
+    transition: 1s;
   }
 
   .nav-box ul {
@@ -136,50 +140,16 @@
     transform: scaleX(1);
   }
 
-  .sign-box {
-    position: absolute;
-    justify-content: end;
-    width: 90%;
-    top: 0;
-    margin-top: 25px;
-  }
-
-  .sign-up-box {
-    color: rgb(231, 231, 231);
-    background-color: #ffb237d1;
-  }
-
-  .sign-in-box {
-    border: 1px solid rgba(255, 255, 255, 0.479);
-    background-color: #ff9d0045;
-    color: white;
-  }
-
-  .sign-in-box:hover {
-    color: white;
-    background-color: #ffb237d1;
-  }
-
-  .sign-in-box:hover + .sign-up-box {
-    border: 1px solid rgba(255, 255, 255, 0.479);
-    background-color: #ff9d0045;
-    color: white;
-  }
-
-  .sign-up-box:hover {
-    color: white;
-  }
-
-  /* ========================================== */
-  /* menu */
-
   .nav-box ul.visible {
-    transform: translateX(0);
+    left: 0;
   }
 
   .nav-box ul.hidden {
-    transform: translateX(-100%);
+    left: -100%;
   }
+
+  /* ============================ */
+  /* menu */
 
   .top-menu {
     width: 100%;
@@ -224,7 +194,46 @@
     transform: rotate(0) translate(0);
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
   }
+
+  /* ====================== */
+  /* Sign Box */
+
+  .sign-box {
+    position: absolute;
+    justify-content: end;
+    width: 90%;
+    top: 0;
+    margin-top: 25px;
+  }
+
+  .sign-up-box {
+    color: rgb(231, 231, 231);
+    background-color: #ffb237d1;
+  }
+
+  .sign-in-box {
+    border: 1px solid rgba(255, 255, 255, 0.479);
+    background-color: #ff9d0045;
+    color: white;
+  }
+
+  .sign-in-box:hover {
+    color: white;
+    background-color: #ffb237d1;
+  }
+
+  .sign-in-box:hover + .sign-up-box {
+    border: 1px solid rgba(255, 255, 255, 0.479);
+    background-color: #ff9d0045;
+    color: white;
+  }
+
+  .sign-up-box:hover {
+    color: white;
+  }
 }
+
+/* MOBILE */
 
 @media (max-width: 768px) {
   .sign-box {
