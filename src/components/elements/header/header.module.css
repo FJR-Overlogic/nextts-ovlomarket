@@ -1,38 +1,42 @@
 .header {
-  margin-top: 100px;
+  margin-top: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .header-container {
-  height: 500px;
-  border-radius: 5px;
-  width: 1200px;
-  background: linear-gradient(to bottom, #ffbe54b2, white);
+  height: 600px;
+  width: 100%;
+  /* background-color: #ffebc8; */
+  /* background: linear-gradient(to bottom, #ffb133b2, #ffebc8); */
   /* background: linear-gradient(to bottom, #ffbe54b2, rgba(237, 237, 237, 0.826)); */
+  background: linear-gradient(to bottom, #ffbe54b2, white);
   display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .lottie-header {
-  height: 460px;
+  height: 500px;
 }
 
 .title-input-box {
   flex-direction: column;
-  margin-left: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 50px;
 }
 
 .title-header {
-  font-size: 50px;
+  font-size: 55px;
   font-weight: 500;
   color: white;
   text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
   text-align: center;
   margin-bottom: 40px;
+  cursor: default;
 }
 
 .search-box {
@@ -62,7 +66,6 @@
 
 .search-box input::placeholder {
   color: white;
-  margin-left: 20px;
   font-weight: thin;
 }
 
@@ -87,7 +90,17 @@
   color: #ff9c00;
 }
 
-@media (max-width: 768px) {
+@media (max-width : 800px){
+  .lottie-header {
+    height: 800px;
+  }
+
+  .title-header{
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 767px) {
   .header {
     margin-top: 60px;
   }
@@ -95,15 +108,15 @@
   .header-container {
     flex-direction: column;
     width: 100%;
-    border-radius: 0px;
   }
 
   .lottie-header {
-    height: 300px;
+    height: 400px;
   }
 
   .title-input-box {
-    margin-left: 0px;
+    margin: 0px;
+    margin-right: 0px;
   }
 
   .title-header {
