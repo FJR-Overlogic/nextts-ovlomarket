@@ -4,6 +4,7 @@
     height: 325px;
     position: relative;
     border-radius: 15px;
+    transition: all 0.5 ease;
 
 }
 
@@ -23,13 +24,120 @@
 
 .tranding-bot div h4 {
     font-weight: 500;
-    font-size: 20;
+    font-size: 20px;
 }
 
 .tranding-button {
+    height: 40px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 500;
     font-size: 16;
     color: black;
     background-color: rgba(217, 217, 217, 1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
 
+.tranding-button:hover {
+    background-color: rgb(4, 4, 4);
+    color: #FFF;
+}
+
+@media (min-width: 0px) {
+    .tranding-container {
+        width: 330px;
+        height: 210px;
+    }
+
+    .tranding-bot div h4 {
+        font-weight: 200;
+        font-size: 15px;
+    }
+
+    .tranding-bot {
+        width: 100%;
+        height: 65px;
+    }
+
+    .tranding-button {
+        height: 30px;
+        width: 75px;
+        font-weight: 500;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 260px) {
+    .tranding-container {
+        width: 240px;
+        height: 230px;
+    }
+
+    .tranding-bot div h4 {
+        font-weight: 200;
+        font-size: 15px;
+    }
+
+    .tranding-bot {
+        width: 100%;
+        height: 75px;
+    }
+
+    .tranding-button {
+        height: 30px;
+        width: 75px;
+        font-weight: 500;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 340px) {
+    .tranding-container {
+        width: 320px;
+        height: 230px;
+    }
+
+    .tranding-bot div h4 {
+        font-weight: 200;
+        font-size: 15px;
+    }
+
+    .tranding-bot {
+        width: 100%;
+        height: 75px;
+    }
+
+    .tranding-button {
+        height: 30px;
+        width: 75px;
+        font-weight: 500;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 400px) {
+    .tranding-container {
+        width: 400px;
+        height: 230px;
+    }
+
+    .tranding-bot div h4 {
+        font-weight: 200;
+        font-size: 15px;
+    }
+
+    .tranding-bot {
+        width: 100%;
+        height: 75px;
+    }
+
+    .tranding-button {
+        height: 30px;
+        width: 75px;
+        font-weight: 500;
+        font-size: 13px;
+    }
 }

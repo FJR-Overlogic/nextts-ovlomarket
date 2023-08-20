@@ -10,7 +10,7 @@ export default function Tranding() {
                     <div>
                         <h4>Product Category</h4>
                     </div>
-                    <div className={`btn rounded-pill ${styles["tranding-button"]}`}>Shop Now</div>
+                    <div className={`rounded-pill ${styles["tranding-button"]}`}>Shop Now</div>
                 </div>
             </div>
         </>
