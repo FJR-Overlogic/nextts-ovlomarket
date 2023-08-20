@@ -3,11 +3,11 @@ import styles from "./product.module.css"
 export default function Product() {
     return (
         <>
-            <div style={{ borderRadius: "4px", width: "300px", height:"500px" }} className="container">
-                <div className="rounded" style={{ paddingBottom: "10px", width: "100%" , height:"60%", overflow:"hidden"}}>
-                    <img style={{ maxWidth: "100%", maxHeight:"auto", width:"auto", height:"auto" }} src="https://pbs.twimg.com/media/F0GdMsaaYAAjYoO.jpg" alt="product" />
+            <div className={`${styles.product}`}>
+                <div className={`${styles.product_image}`}>
+                    <img src="https://pbs.twimg.com/media/F0GdMsaaYAAjYoO.jpg" alt="product" />
                 </div>
-                <div>
+                <div className={`${styles.product_header}`}>
                     <h5 className="fw-bold">
                         ProductName
                     </h5>
@@ -20,7 +20,7 @@ export default function Product() {
                         </p>
                     </div>
                 </div>
-                <div style={{ color: "#FFF", backgroundColor: "#FF9C00", borderRadius: "20px" }} className="btn">Add to cart</div>
+                <div className={`btn ${styles.product_button}`}>Add to cart</div>
             </div>
         </>
     )
