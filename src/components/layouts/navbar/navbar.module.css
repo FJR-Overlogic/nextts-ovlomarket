@@ -11,6 +11,7 @@
   font-size: 30px;
   margin: auto;
   letter-spacing: 1px;
+  cursor: default;
 }
 
 .nav-box ul {
