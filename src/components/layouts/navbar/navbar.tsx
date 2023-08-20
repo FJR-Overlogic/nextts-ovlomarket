@@ -53,7 +53,7 @@ export default function Navbar() {
               <div className={`${styles["li-navbar-text"]}`}>About Us</div>
             </Link>
           </li>
-          <div className={`d-flex ${styles["sign-box"]} ms-5`}>
+          <div className={`d-flex ${styles["sign-box"]}`}>
             <Link className={`nav-link ${styles["sign-in-box"]}`} href="#">
               Sign In
             </Link>

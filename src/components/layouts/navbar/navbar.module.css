@@ -50,6 +50,10 @@
   background-color: #ff9c00;
 }
 
+.sign-box {
+  margin-left: 25px;
+}
+
 .sign-up-box {
   width: 90px;
   height: 35px;
@@ -98,8 +102,9 @@
 
 /* Tablet */
 
-@media (max-width: 1090px) {
+@media (max-width: 1024px) {
   .nav-box {
+    width: 100%;
     justify-content: space-between;
     padding-left: 30px;
     padding-right: 10px;
@@ -205,6 +210,7 @@
     width: 90%;
     top: 0;
     margin-top: 25px;
+    margin-left: 0px;
   }
 
   .sign-up-box {
@@ -239,11 +245,11 @@
 @media (max-width: 768px) {
   .sign-box {
     position: absolute;
-    width: 90%;
     top: 0;
     margin-top: 90px;
     width: 180px;
     font-size: 12px;
+    margin-left: 0px;
   }
 
   .sign-in-box {
