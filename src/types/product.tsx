@@ -1,4 +1,5 @@
 export type ProductTypes = {
+    isShow: any;
     id: number;
     title : string;
     price : string;
