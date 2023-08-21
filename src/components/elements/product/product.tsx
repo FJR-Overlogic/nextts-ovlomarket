@@ -1,27 +1,38 @@
-import styles from "./product.module.css"
+"use client";
+import { useEffect, useState } from "react";
+import styles from "./product.module.css";
+import { ProductTypes } from "@/types/product";
 
 export default function Product() {
-    return (
-        <>
-            <div className={`${styles.product}`}>
-                <div className={`${styles.product_image}`}>
-                    <img src="https://pbs.twimg.com/media/F0GdMsaaYAAjYoO.jpg" alt="product" />
-                </div>
-                <div className={`${styles.product_header}`}>
-                    <h5 className="fw-bold">
-                        ProductName
-                    </h5>
-                    <h5 className="fw-bold">
-                        RS.100,000.00
-                    </h5>
-                    <div className={`${styles.product_desc}`}>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
-                        </p>
-                    </div>
-                </div>
-                <div className={`btn ${styles.product_button}`}>Add to cart</div>
+  const [products, setProducts] = useState<ProductTypes[]>([]);
+
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setProducts(data);
+      });
+  });
+
+  return (
+    <>
+      {products.map((product, index) => (
+        <div key={product.id} className={`${styles.product}`}>
+          <div className={`${styles.product_image}`}>
+            <img src={product.image} alt="product" />
+          </div>
+
+          <div className={`${styles.product_header}`}>
+            <h5 className="fw-bold">{product.title}</h5>
+            <h5 className="fw-bold">${product.price}</h5>
+            <div className={`${styles.product_desc}`}>
+              <p>{product.description}</p>
             </div>
-        </>
-    )
+          </div>
+          <div className={`btn ${styles.product_button}`}>Add to cart</div>
+        </div>
+      ))}
+    </>
+  );
 }
