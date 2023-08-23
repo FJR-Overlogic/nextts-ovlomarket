@@ -1,6 +1,4 @@
 "use client";
-import Image from "next/image";
-import HeaderImage from "@/assets/header.png";
 import styles from "./header.module.css";
 import Lottie from "lottie-react";
 import LottieHeader from "@/assets/lottie/LottieHeader.json";
@@ -9,7 +7,13 @@ export default function Header() {
   return (
     <div className={`${styles["header"]}`}>
       <div className={`${styles["header-container"]}`}>
-        <Lottie animationData={LottieHeader} className={`${styles["lottie-header"]}`} autoPlay={true} loop={true} data-aos="fade-right" />
+        <Lottie
+          animationData={LottieHeader}
+          className={`${styles["lottie-header"]}`}
+          autoPlay={true}
+          loop={true}
+          data-aos="fade-right"
+        />
         <div className={`${styles["title-input-box"]}`} data-aos="fade-left">
           <div className={`${styles["title-header"]}`}>
             Welcome To <br />
