@@ -1,7 +1,18 @@
+"use client"
 import FooterSection from "../footerSection/footerSection";
 import styles from "./footer.module.css";
-
+import { useEffect, useState } from "react";
+import { FooterType } from "@/types/footer";
 export default function Footer() {
+  const [category, setCategory] = useState<FooterType[]>([])
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products/categories")
+      .then((res) => res.json())
+      .then((data) => {
+        const upperCaseCategory = data.map((cat: string) => cat.charAt(0).toUpperCase() + cat.slice(1))
+        setCategory(upperCaseCategory)
+      })
+  }, [])
   return (
     <div className={`${styles["footer"]}`} data-aos="fade-up" data-aos-anchor-placement="center-bottom">
       <div className={`container ${styles["footer-container"]}`}>
@@ -31,11 +42,10 @@ export default function Footer() {
         <div className={`${styles["footer-section"]}`}>
           <FooterSection
             title={"Categories"}
-            links_a={"Category 1"}
-            links_b={"Category 2"}
-            links_c={"Category 3"}
-            links_d={"Category 4"}
-            links_e={"Category 5"}
+            links_a={`${category[0]}`}
+            links_b={`${category[1]}`}
+            links_c={`${category[2]}`}
+            links_d={`${category[3]}`}
           />
         </div>
         <div className={`${styles["footer-section"]}`}>
@@ -45,7 +55,7 @@ export default function Footer() {
           />
           <form className={`${styles.footer_form}`} action="newsletter-form">
             <div className="form-container">
-              <input type="email"/>
+              <input type="email" />
               <label htmlFor="email">Your Email Address</label>
             </div>
             <button className={`btn ${styles.footer_button}`}>Submit</button>
