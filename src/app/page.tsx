@@ -1,6 +1,6 @@
-import Header from "@/components/elements/header/header";
-import Footer from "@/components/elements/footer/footer";
-import Product from "@/components/elements/product/product";
+import Header from "@/components/elements/home/header/header";
+import Product from "@/components/elements/home/product/product";
+import Footer from "@/components/layouts/footer/footer";
 
 export default function Home() {
   return (

@@ -1,6 +1,6 @@
 .footer {
     margin-top: 20px;
-    background-color: #393434;
+    background-color:rgb(24, 24, 24);
     width: 100%;
     height: 260px;
     padding-left: 10%;
@@ -58,7 +58,7 @@
 }
 
 .footer-container input:focus {
-    outline: #ff9c00;
+    outline: #0398fc;
 }
 
 .footer_brand {
@@ -76,22 +76,22 @@
     height: 32px;
     width: 70px;
     border-radius: 20px;
-    border: #ff9c00;
+    border: #0398fc;
     display: flex;
     align-items: center;
-    background-color: #ff9c00;
+    background-color: #0398fc;
     color: #fff3d8;
     font-size: smaller;
     outline: red;
 }
 
 .footer_button:hover {
-    background-color: #ffa616;
+    background-color: #1fa3fc;
     color: rgb(255, 255, 255);
 }
 
 .footer_span {
-    color: #ff9c00;
+    color: #0398fc;
 }
 
 @media (max-width: 1015px) {

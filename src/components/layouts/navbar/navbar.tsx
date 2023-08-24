@@ -12,42 +12,22 @@ export default function Navbar() {
   return (
     <div>
       <nav className={`${styles["nav-box"]} fixed-top`}>
-        <div
-          className={`${styles["title-navbar"]} ${
-            isMenuClicked ? styles.visible : styles.hidden
-          }`}
-        >
+        <div className={`${styles["title-navbar"]} ${isMenuClicked ? styles.visible : styles.hidden}`}>
           Over
           <span
             style={{
-              color: "#ff9c00",
+              color: "#0398fc",
             }}
           >
             Logic
           </span>
         </div>
         <div className={styles["burger-menu"]} onClick={updateMenu}>
-          <div
-            className={`${styles["burger-bar"]} ${
-              isMenuClicked ? styles.clicked : styles.unclicked
-            }`}
-          ></div>
-          <div
-            className={`${styles["burger-bar"]} ${
-              isMenuClicked ? styles.clicked : styles.unclicked
-            }`}
-          ></div>
-          <div
-            className={`${styles["burger-bar"]} ${
-              isMenuClicked ? styles.clicked : styles.unclicked
-            }`}
-          ></div>
+          <div className={`${styles["burger-bar"]} ${isMenuClicked ? styles.clicked : styles.unclicked}`}></div>
+          <div className={`${styles["burger-bar"]} ${isMenuClicked ? styles.clicked : styles.unclicked}`}></div>
+          <div className={`${styles["burger-bar"]} ${isMenuClicked ? styles.clicked : styles.unclicked}`}></div>
         </div>
-        <ul
-          className={`fw-semibold text-center gap-5 ${
-            isMenuClicked ? styles.visible : styles.hidden
-          }`}
-        >
+        <ul className={`fw-semibold text-center gap-5 ${isMenuClicked ? styles.visible : styles.hidden}`}>
           <li>
             <Link className="text-decoration-none" href="#">
               <div className={`${styles["li-navbar-text"]}`}>Home</div>
@@ -77,10 +57,7 @@ export default function Navbar() {
             <Link className={`nav-link ${styles["sign-in-box"]}`} href="#">
               Sign In
             </Link>
-            <Link
-              className={`nav-link ${styles["sign-up-box"]}  ms-2`}
-              href="#"
-            >
+            <Link className={`nav-link ${styles["sign-up-box"]}  ms-2`} href="#">
               Sign Up
             </Link>
           </li>

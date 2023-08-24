@@ -11,7 +11,8 @@
   /* background-color: #ffebc8; */
   /* background: linear-gradient(to bottom, #ffb133b2, #ffebc8); */
   /* background: linear-gradient(to bottom, #ffbe54b2, rgba(237, 237, 237, 0.826)); */
-  background: linear-gradient(to bottom, #ffbe54b2, white);
+  background: linear-gradient(to bottom, #3eb2ff, white);
+  /* background-color: #e9f6ff; */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -78,16 +79,16 @@
   font-size: 12px;
   margin-right: 5px;
   color: white;
-  background-color: #ff9c00;
+  background-color: #0398fc;
 }
 
 .search-box button:hover {
-  background-color: #ffa616;
+  background-color: #1fa3fc;
 }
 
 .button:hover {
-  border: 1px solid #ff9c00;
-  color: #ff9c00;
+  border: 1px solid #0398fc;
+  color: #0398fc;
 }
 
 @media (max-width : 800px){
