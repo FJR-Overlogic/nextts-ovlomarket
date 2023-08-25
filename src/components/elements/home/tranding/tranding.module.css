@@ -1,3 +1,8 @@
+.tranding {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
 .tranding-container {
     background-color: rgba(217, 217, 217, 1);
     position: relative;
@@ -41,7 +46,7 @@
 }
 
 .tranding-button:hover {
-    background-color: rgb(4, 4, 4);
+    background-color: #FF9C00;
     color: #FFF;
 }
 
@@ -144,6 +149,10 @@
         font-weight: 500;
         font-size: 13px;
     }
+
+    .tranding {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 @media (min-width: 400px) {
@@ -167,6 +176,10 @@
         width: 75px;
         font-weight: 500;
         font-size: 13px;
+    }
+
+    .tranding {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
