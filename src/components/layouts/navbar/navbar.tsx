@@ -16,7 +16,7 @@ export default function Navbar() {
           Over
           <span
             style={{
-              color: "#0398fc",
+              color: "#1fa3fc",
             }}
           >
             Logic

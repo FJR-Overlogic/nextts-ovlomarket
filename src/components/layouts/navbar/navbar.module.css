@@ -42,12 +42,12 @@
 }
 
 .li-navbar-text:hover {
-  color: #0398fc;
+  color: #0077c6;
 }
 
 .li-navbar-text:hover::after {
   transform: scaleX(0.5);
-  background-color: #0398fc;
+  background-color: #0077c6;
 }
 
 .sign-box {
@@ -60,7 +60,7 @@
   border-radius: 20px;
   font-size: 14px;
   color: white;
-  background-color: #0398fc;
+  background-color: #0077c6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,10 +71,10 @@
   width: 90px;
   height: 35px;
   border-radius: 20px;
-  border: 1px solid #0398fc;
+  border: 1px solid #0077c6;
   background-color: white;
   font-size: 14px;
-  color: #0398fc;
+  color: #0077c6;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,13 +83,13 @@
 
 .sign-in-box:hover {
   color: white;
-  background-color: #0398fc;
+  background-color: #0077c6;
 }
 
 .sign-in-box:hover + .sign-up-box {
   background-color: white;
-  border: 1px solid #0398fc;
-  color: #0398fc;
+  border: 1px solid #0077c6;
+  color: #0077c6;
 }
 
 .sign-up-box:hover {
@@ -179,7 +179,7 @@
   .burger-bar {
     width: 2em;
     height: 0.3em;
-    background-color: #0398fc;
+    background-color: #1fa3fc;
     border-radius: 0.5em;
   }
 
@@ -215,23 +215,24 @@
 
   .sign-up-box {
     color: white;
-    background-color: #0398fc;
+    background-color: #1fa3fc;
   }
 
   .sign-in-box {
-    border: 1px solid white;
-    background-color: #65b3e8;
+    border: 1.4px solid rgba(255, 255, 255, 0.479);
+    background-color: #0077c6;
     color: white;
   }
 
   .sign-in-box:hover {
     color: white;
-    background-color: #0398fc;
+    border: none;
+    background-color: #1fa3fc;
   }
 
   .sign-in-box:hover + .sign-up-box {
-    border: 1px solid white;
-    background-color: #5392bc;
+    border: 1.4px solid rgba(255, 255, 255, 0.479);
+    background-color: #0077c6;
     color: white;
   }
 
