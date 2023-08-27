@@ -1,9 +1,26 @@
 import Link from "next/link";
 import styles from "./navbar.module.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 580) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const updateMenu = () => {
     setIsMenuClicked(!isMenuClicked);
@@ -11,8 +28,8 @@ export default function Navbar() {
 
   return (
     <div>
-      <nav className={`${styles["nav-box"]} fixed-top`}>
-        <div className={`${styles["title-navbar"]} ${isMenuClicked ? styles.visible : styles.hidden}`}>
+      <nav className={`${styles["nav-box"]} ${scrolled ? styles.scrolled : ""} fixed-top`}>
+        <div className={` ${styles["title-navbar"]}  ${scrolled ? styles.scrolled : ""} ${isMenuClicked ? styles.visible : styles.hidden}`}>
           Over
           <span
             style={{
@@ -30,34 +47,34 @@ export default function Navbar() {
         <ul className={`fw-semibold text-center gap-5 ${isMenuClicked ? styles.visible : styles.hidden}`}>
           <li>
             <Link className="text-decoration-none" href="#">
-              <div className={`${styles["li-navbar-text"]}`}>Home</div>
+              <div className={`${styles["li-navbar-text"]}  ${scrolled ? styles.scrolled : ""}`}>Home</div>
             </Link>
           </li>
           <li>
             <Link className="text-decoration-none" href="#">
-              <div className={`${styles["li-navbar-text"]}`}>Shop Online</div>
+              <div className={`${styles["li-navbar-text"]}  ${scrolled ? styles.scrolled : ""}`}>Shop Online</div>
             </Link>
           </li>
           <li>
             <Link className="text-decoration-none" href="#">
-              <div className={`${styles["li-navbar-text"]}`}>What's New</div>
+              <div className={`${styles["li-navbar-text"]}  ${scrolled ? styles.scrolled : ""}`}>What's New</div>
             </Link>
           </li>
           <li>
             <Link className="text-decoration-none" href="#">
-              <div className={`${styles["li-navbar-text"]}`}>Contact</div>
+              <div className={`${styles["li-navbar-text"]}  ${scrolled ? styles.scrolled : ""}`}>Contact</div>
             </Link>
           </li>
           <li>
             <Link className="text-decoration-none" href="#">
-              <div className={`${styles["li-navbar-text"]}`}>About Us</div>
+              <div className={`${styles["li-navbar-text"]}  ${scrolled ? styles.scrolled : ""}`}>About Us</div>
             </Link>
           </li>
           <li className={`d-flex ${styles["sign-box"]}`}>
-            <Link className={`nav-link ${styles["sign-in-box"]}`} href="#">
+            <Link className={`nav-link ${styles["sign-in-box"]} ${scrolled ? styles.scrolled : ""}`} href="#">
               Sign In
             </Link>
-            <Link className={`nav-link ${styles["sign-up-box"]}  ms-2`} href="#">
+            <Link className={`nav-link ${styles["sign-up-box"]} ms-2 ${scrolled ? styles.scrolled : ""}`} href="#">
               Sign Up
             </Link>
           </li>
