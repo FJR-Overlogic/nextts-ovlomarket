@@ -1,5 +1,5 @@
 .header {
-  margin-top: 80px;
+  /* margin-top: 80px; */
   display: flex;
   justify-content: start;
   align-items: start;
@@ -25,7 +25,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* margin-right: 50px; */
   margin-left: 150px;
 }
 
@@ -91,7 +90,11 @@
 }
 
 @media (max-width: 992px) {
-  .header-container{
+  .header {
+    margin-top: 80px;
+  }
+
+  .header-container {
     height: 500px;
   }
 
@@ -107,6 +110,7 @@
 @media (max-width: 768px) {
   .header-container {
     height: 300px;
+
     flex-direction: column;
     width: 100%;
   }

@@ -6,6 +6,7 @@ import HeaderImage from "@/assets/images/header/header-image.jpg";
 
 export default function Header() {
   return (
+    <div>
     <div
       className={`${styles["header"]}`}
       style={{
@@ -14,7 +15,7 @@ export default function Header() {
     >
       <div className={`${styles["header-container"]}`}>
         {/* <Lottie animationData={LottieHeader} className={`${styles["lottie-header"]}`} autoPlay={true} loop={true} data-aos="fade-right" /> */}
-        <div className={`${styles["title-input-box"]}`} data-aos="fade-left">
+        <div className={`${styles["title-input-box"]}`} data-aos="fade-down">
           <div className={`${styles["title-header"]}`}>
             Welcome To <br />
             Over
@@ -33,6 +34,7 @@ export default function Header() {
           </form>
         </div>
       </div>
+    </div>
     </div>
   );
 }
