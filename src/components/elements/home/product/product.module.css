@@ -19,7 +19,7 @@
 }
 
 .product:hover {
-    background-color: #ff9d0016;
+    background-color: #0398fc33;
 }
 
 .product_image {
@@ -37,7 +37,7 @@
     border-radius: 5px;
     padding: 10px;
     display: none;
-    background-color: #FF9C00;
+    background-color: #0398fc;
     position: absolute;
     top: 0;
     left: 0;
@@ -85,7 +85,7 @@
 
 .product_button {
     color: #FFF;
-    background-color: #FF9C00;
+    background-color: #0398fc;
     border-radius: 20px;
     font-size: 7px;
     width: 60px;
@@ -95,8 +95,8 @@
 
 .product_button:hover {
     background-color: #ffffff;
-    border: 1px solid #FF9C00;
-    color: #FF9C00
+    border: 1px solid #0398fc;
+    color: #0398fc
 }
 
 @media (min-width:300px) {
