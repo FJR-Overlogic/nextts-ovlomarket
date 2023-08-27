@@ -6,7 +6,7 @@
 }
 
 .footer_links:after {
-    color: #ff9c00;
+    color: #0077c6;
     content: "";
     position: absolute;
     width: 100%;
@@ -14,7 +14,7 @@
     height: 1px;
     bottom: 0;
     left: 0;
-    background-color: #ff9c00;
+    background-color: #0077c6;
     transform-origin: bottom right;
     transition: transform 0.4s ease-out;
 
@@ -31,7 +31,7 @@
 }
 
 .footer_header {
-    color: #ff9c00;
+    color: #0077c6;
 }
 
 .footersection {
