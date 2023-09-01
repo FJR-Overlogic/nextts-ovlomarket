@@ -11,7 +11,6 @@ export default function Product() {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setProducts(data);
         const productsWithIsShow = data.map(
           (products: any) => ({
@@ -38,14 +37,19 @@ export default function Product() {
     <div className={`${styles.product_container}`}>
       {products.map((product, index) => (
         <div key={product.id} className={`${styles.product}`}>
-          <div className={`${styles.product_image}`} onClick={() => handleClick(product.id)}>
-            <img src={product.image} alt="product" />
-            <div aos-data={"fade-up"} className={`${styles.product_desc}`} style={{
-              display: product.isShow ? "block" : "none",
-              opacity: product.isShow ? 1:0
-              }}>
-              <p>{product.description}</p>
+          <div aos-data={"fade-up"} className={`${styles.product_desc}`} style={{
+            display: product.isShow ? "block" : "none",
+            opacity: product.isShow ? 1 : 0
+          }}>
+            <div className="d-flex align-items-center justify-content-center">
+              <h5>Description</h5>
             </div>
+            <p>{product.description}</p>
+          </div>
+          <div className={`${styles.product_image}`} onClick={() => handleClick(product.id)}>
+            <img src={product.image} alt="product" style={{        
+            opacity: product.isShow ? 0 : 1
+          }}/>
           </div>
 
           <div className={`${styles.product_header}`}>
@@ -54,7 +58,8 @@ export default function Product() {
           </div>
           <div className={`btn ${styles.product_button}`}>Add to cart</div>
         </div>
-      ))}
-    </div>
+      ))
+      }
+    </div >
   );
 }

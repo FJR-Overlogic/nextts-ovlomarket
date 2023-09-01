@@ -10,7 +10,9 @@
 }
 
 .product {
-    padding: 1%;
+    position: relative;
+    margin-top: 20px;
+    padding: 3%;
     width: 100px;
     height: 150px;
     border-radius: 4px;
@@ -26,6 +28,7 @@
     padding-bottom: 10px;
     overflow: hidden;
     position: relative;
+    
 }
 
 .product_header {
@@ -34,10 +37,11 @@
 }
 
 .product_desc {
+    /* backdrop-filter: blur(1px); */
     border-radius: 5px;
     padding: 10px;
     display: none;
-    background-color: #0398fc;
+    background-color: #0398FC;
     position: absolute;
     top: 0;
     left: 0;
@@ -84,6 +88,9 @@
 }
 
 .product_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #FFF;
     background-color: #0398fc;
     border-radius: 20px;
